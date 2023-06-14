@@ -15,18 +15,18 @@ void print_python_bytes(PyObject *p)
 	printf("[.] bytes object info\n");
 	if (!PyBytes_Check(p))
 	{
-		printf(" [ERROR] Invalid Bytes Object\n");
+		printf("   [ERROR] Invalid Bytes Object\n");
 		return;
 	}
 	x = ((PyVarObject *)(p))->ob_size;
 	s = ((PyBytesObject *)p)->ob_sval;
-	printf(" size: %ld\n", x);
-	printf(" trying string: %s\n", s);
+	printf("   size: %ld\n", x);
+	printf("   trying string: %s\n", s);
 	if (x >= 10)
 		z = 10;
 	else
 		z = x + 1;
-	printf(" first %ld bytes:", z);
+	printf("   first %ld bytes:", z);
 	for (y = 0; y < z; y++)
 		if (s[y] >= 0)
 			printf(" %02x", s[y]);
