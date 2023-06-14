@@ -20,11 +20,12 @@ def roman_to_int(roman_string):
     k = [0]
     for x in roman_string:
         for y in a_keys:
-            if a.get(x) <= j:
-                i += differance(k)
-                k = [a.get(x)]
-            else:
-                k.append(a.get(x))
-            j = a.get(x)
+            if y == x:
+                if a.get(x) <= j:
+                    i += differance(k)
+                    k = [a.get(x)]
+                else:
+                    k.append(a.get(x))
+                j = a.get(x)
     i += differance(k)
     return (i)
