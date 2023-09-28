@@ -1,3 +1,3 @@
 #!/bin/bash
-# displays the size
-curl -s "$1" | wc -c
+# cURL to the end
+curl -sX GET $1 -L
