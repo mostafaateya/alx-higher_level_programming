@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""0x11. Python - Network #1, task 4. What's my status? #1
-"""
+'''
+Script that fetches https://intranet.hbtn.io/status
+'''
+import requests
 
 if __name__ == "__main__":
-    from requests import get
-
-    response = get('https://intranet.hbtn.io/status')
-    print('Body response:\n\t- type: {}\n\t- content: {}'.format(
-        type(response.text), response.text))
+    url = requests.get('https://intranet.hbtn.io/status')
+    print('Body response:')
+    print('\t- type: {}'.format(type(url.text)))
+    print('\t- content: {}'.format(url.text))
