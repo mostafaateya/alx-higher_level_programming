@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""fetches https://intranet.hbtn.io/status"""
-from requests import get
+"""
+Write a Python script that fetches https://intranet.hbtn.io/status
 
+You must use the package requests
+"""
+import requests
 
 if __name__ == "__main__":
-    request = get("https://intranet.hbtn.io/status")
-    print("Body response:")
-    print("\t- type: {}".format(type(request.text)))
-    print("\t- content: {}".format(request.text))
+
+    url = "https://intranet.hbtn.io/status"
+    req = requests.get(url)
+    print('Body response:')
+    print('\t- type: {}'.format(type(req.text)))
+    print('\t- content: {}'.format(req.text))
