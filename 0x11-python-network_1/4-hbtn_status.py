@@ -1,15 +1,10 @@
 #!/usr/bin/python3
+"""0x11. Python - Network #1, task 4. What's my status? #1
 """
-Write a Python script that fetches https://intranet.hbtn.io/status
-
-You must use the package requests
-"""
-import requests
 
 if __name__ == "__main__":
+    from requests import get
 
-    url = "https://intranet.hbtn.io/status"
-    req = requests.get(url)
-    print('Body response:')
-    print('\t- type: {}'.format(type(req.text)))
-    print('\t- content: {}'.format(req.text))
+    response = get('https://intranet.hbtn.io/status')
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(
+        type(response.text), response.text))
