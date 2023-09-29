@@ -2,7 +2,7 @@
 '''
 Script that fetches https://intranet.hbtn.io/status
 '''
-from requests import get
+import requests 
 
 if __name__ == "__main__":
     url = requests.get('https://intranet.hbtn.io/status')
