@@ -1,3 +1,1 @@
-#!/usr/bin/node
-const headColor = document.querySelector('header');
-headColor.style.color = '#FF0000';
+document.querySelector('header').style.color = '#FF0000';
